@@ -1,7 +1,9 @@
-  <html>
+ <html>
   <head><title>POC XSS Lemonoftroy</title></head>
   <body style="background:#111;color:#0f0;font-family:monospace;text-align:center;padding-top:100px">
   <h1>POC XSS Lemonoftroy</h1>
-  <script>alert(document.referrer)</script>
+  <script>alert(document.referrer);window.location.href="https://www.google.com";</script>
   </body>
   </html>
+
+
